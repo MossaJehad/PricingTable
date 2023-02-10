@@ -1,0 +1,225 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Nanum Gothic', 'Cairo', sans-serif;
+}
+
+body{
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: rgb(30,77,133);
+    background: linear-gradient(292deg, rgba(30,77,133,1) 0%, rgba(133,205,253,1) 50%, rgba(26,118,142,1) 100%);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    text-transform: uppercase;
+    color: #3C84AB;
+    padding: 10px 0 0 0;
+    margin: 10px;
+    width: 80%;   
+}
+
+.panel img{
+    max-width: 100%;
+}
+
+section.plan {
+    margin: 10px 5px;
+    padding: 20px 0;
+    border-bottom: 1px solid #3c84ab70 ;
+}
+
+section.plan:last-child{
+    border: none;
+}
+
+section.plan h2.planName {
+    color: darkgrey;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+}
+
+section.plan ul{
+    display: inline-block;
+    line-height: 1.5rem;
+    margin: 5px 0;
+    width: 75%;
+}
+
+section.plan ul li{
+    border-bottom: 1px solid #3c84ab70;
+    padding: 10px 0;
+    width: 100%;
+    line-height: 3;
+}
+
+section.plan span.price{
+    display: block;
+    margin: 10px 0;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+section.plan button {
+  background-color: #FFFFFF;
+  border: 1px solid #85CDFD;
+  border-radius: .5rem;
+  color: #3C84AB;
+  font-family: 'Open Sans', "Segoe UI", "Helvetica Neue", Arial;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .5rem 1.2rem;
+  margin: 1.2rem 0;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+section.plan:nth-of-type(2) button{
+    color: white;
+    background-color: #3C84AB;
+    border: 1px solid rgb(225, 228, 233);
+}
+
+section.plan:nth-of-type(2) button:hover {
+    background-color: rgb(24, 92, 159);
+  }
+
+section.plan button:hover {
+  background-color: rgba(229, 233, 236, 0.601);
+}
+
+section.plan button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+
+@media (min-width: 540px) {
+    html{
+        font-size: 20px;
+    }
+
+    .plan button {
+        scale: 20px;
+    }
+}
+
+@media (min-width: 772px) {
+
+    .panel{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        border-radius: 10px;
+        padding: 15px 25px;
+        width: 100%;
+        max-width: 972px;
+        font-size: medium;
+    }
+
+    section.plan{
+        width: calc(100% / 3);
+    }
+
+    section.plan ul li, section.plan ul {
+        line-height: 1.5;
+        font-weight: 400;
+        padding: 15px 0;
+    }
+
+    section.plan {
+        border-bottom: none;
+    }
+
+    .panel img {
+        width: 50%;
+        height: 131px;
+        object-fit: cover;
+    }
+}
+
+div.opt {
+    position: absolute;
+    width: 50px;
+    top: 50px;
+    left: 50px;
+}
+
+div.opt .lang, .lit{
+    width: 44px;
+}
+
+div.opt button{
+    background: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.lang.en{
+    display: none;
+}
+
+.lit.ng{
+    display: none;
+}
+
+button.ar:checked{
+    display: none;
+
+}
